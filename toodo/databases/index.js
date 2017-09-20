@@ -2,17 +2,19 @@
 import Realm from 'realm';
 
 
-class TestToDooSchema extends Realm.Object {}
-  TestToDooSchema.schema = {
-    name: 'TestToDooSchema',
-    properties: {
-      title: 'string',
-      desciption: 'string',
-      date: 'string',
-      status: 'bool'
-    }
-  };
+
+class TooDoSchema extends Realm.Object {}
+TooDoSchema.schema = {
+  name: 'TooDoSchema',
+  properties: {
+    id:'int',
+    title: 'string',
+    desciption: 'string',
+    date: 'string',
+    status: 'bool'
+  }
+};
 
 
 
-export default new Realm({schema: [ TestToDooSchema ],schemaVersion:1})
+export default new Realm({schema: [ TooDoSchema ],schemaVersion:1})

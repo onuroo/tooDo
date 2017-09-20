@@ -6,7 +6,7 @@ import colors from '../../../../const/colors'
 import Button from '../../../../components/button/button.component.js'
 
 
-@inject("tooDoListStore")
+@inject("tooDoCreateStore")
 @observer
 export default class CreateButton extends Component {
   constructor(props){
@@ -15,8 +15,9 @@ export default class CreateButton extends Component {
     }
   }
   createTooDoAction(){
-    Alert.alert('qweqw')  
+    this.props.tooDoCreateStore.logger()
   }
+ 
   render() {
     return (
       <Button title={'Create'} onPress={() => this.createTooDoAction()} activeOpacity={0.7} textStyles={{color:'#FFF',fontWeight:'800'}} styles={{justifyContent:'center',alignItems:'center',height:60,backgroundColor:colors.colors.doneColor}} />

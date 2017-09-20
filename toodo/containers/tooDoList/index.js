@@ -21,7 +21,7 @@ const screen = {
   height:Dimensions.get('window').height
 }
 
-@inject("tooDoListStore")
+@inject("tooDoListStore","tooDoStore")
 @observer
 export default class TooDoList extends Component {
   
@@ -50,7 +50,7 @@ export default class TooDoList extends Component {
     ) 
   }
   render() {
-    const { message, data, tooDoDataSource } = this.props.tooDoListStore
+    const { data, message } = this.props.tooDoStore
     return (
       <View style={styles.container}>
         <FlatList
@@ -58,6 +58,7 @@ export default class TooDoList extends Component {
           data={data}
           renderItem={this.renderRow}
         />
+        <Text>{message}</Text>
       </View>
     );
   }
