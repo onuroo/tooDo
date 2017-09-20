@@ -19,7 +19,7 @@ export default class CreateButton extends Component {
   }
   render() {
     return (
-      <Button title={'Create'} onPress={() => this.createTooDoAction()} styles={{justifyContent:'center',alignItems:'center',backgroundColor:colors.colors.doneColor}} />
+      <Button title={'Create'} onPress={() => this.createTooDoAction()} activeOpacity={0.7} textStyles={{color:'#FFF',fontWeight:'800'}} styles={{justifyContent:'center',alignItems:'center',height:60,backgroundColor:colors.colors.doneColor}} />
     );
   }
 }

@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../../../const/colors'
+
 const styles = StyleSheet.create({
-  container: {
-    fontSize:17,
-    color: '#fff',
-  },
+  touchable: {
+      flex:1,
+      backgroundColor:colors.colors.undoColor
+  }
 });
 
 export default styles

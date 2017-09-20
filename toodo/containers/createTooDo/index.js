@@ -9,34 +9,21 @@ import {
 } from 'react-native';
 import Input from '../../components/input/input.component'
 import CreateButton from './view/createButton/createButton.component'
+import TextInputTitle from './view/textInputTitle/textInputTitle.component'
+import TextInputDetail from './view/textInputDetail/textInputDetail.component'
+import styles from './styles'
+
 export default class CreateTooDo extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{textAlign:'left',margin:10}}>Title</Text>
-        <Input styles={{margin:10}} placeholder={"Title"} multiline={false} />
-        <Text style={{textAlign:'left',margin:10}}>Detail</Text>
-        <Input styles={{margin:10}} placeholder={"Title"} multiline={true} />
+        <Text style={styles.titleText}>Title</Text>
+        <TextInputTitle />
+        <Text style={styles.titleText}>Detail</Text>
+        <TextInputDetail />
+        <View style={styles.restContentView}></View>
         <CreateButton />
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-

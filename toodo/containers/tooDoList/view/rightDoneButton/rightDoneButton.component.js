@@ -13,11 +13,10 @@ export default class RightDoneButton extends Component {
     }
   }
   render() {
-    console.log('-LEFT BUTTON-')
     console.log(this.props.tooDoListStore.data)
     return (
-      <TouchableOpacity style={{flex:1,backgroundColor:colors.colors.doneColor,justifyContent:'center',alignItems:'center'}}>
-        <Text style={{color:'#fff'}}>Undo</Text>
+      <TouchableOpacity style={styles.touchable}>
+        <Text style={styles.undoText}>Undo</Text>
 
       </TouchableOpacity>
     );

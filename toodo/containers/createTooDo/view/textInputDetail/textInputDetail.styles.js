@@ -1,9 +1,9 @@
 import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
-  container: {
-    fontSize:17,
-    color: '#fff',
-  },
+    inputStyles: {
+        margin:10,
+        fontSize:18
+    }
 });
 
 export default styles

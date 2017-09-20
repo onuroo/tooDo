@@ -14,10 +14,9 @@ export default class RightUndoButton extends Component {
     }
   }
   render() {
-    console.log('-LEFT BUTTON-')
     console.log(this.props.tooDoListStore.data)
     return (
-      <TouchableOpacity style={{flex:1,backgroundColor:colors.colors.undoColor}}>
+      <TouchableOpacity style={styles.touchable}>
        
       </TouchableOpacity>
     );

@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-import { ListView, Text, TouchableOpacity, View } from 'react-native';
 import {observable,computed} from 'mobx';
 
 class TooDoListStore {
@@ -13,11 +11,6 @@ class TooDoListStore {
     {text:'This is a sixth todo', date: 'Mon Sep 11 2017 14:30:53 GMT+0300 (+03)'},
   ]
   
-  ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
-
-  @computed get tooDoDataSource() {
-    return this.ds.cloneWithRows(this.data.slice());
-  }
 
   
 }
